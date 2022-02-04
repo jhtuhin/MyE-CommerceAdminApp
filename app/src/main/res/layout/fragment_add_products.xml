@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.AddProductsFragment">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Product Name"
+                android:ems="10"
+                android:layout_margin="7dp"
+                android:id="@+id/productNameET"
+                android:inputType="text"
+                android:textSize="16sp"/>
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/categorySP"
+                    android:layout_margin="7dp" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Sell Price"
+                android:ems="10"
+                android:layout_margin="7dp"
+                android:id="@+id/sellPriceET"
+                android:inputType="number"
+                android:textSize="16sp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Purchase Price"
+                android:ems="10"
+                android:layout_margin="7dp"
+                android:id="@+id/purchasePriceET"
+                android:inputType="number"
+                android:textSize="16sp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Quantity"
+                android:ems="10"
+                android:layout_margin="7dp"
+                android:id="@+id/quantityET"
+                android:inputType="number"
+                android:textSize="16sp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Product Description"
+                android:ems="10"
+                android:layout_margin="7dp"
+                android:id="@+id/productDescriptionET"
+                android:inputType="text"
+                android:textSize="16sp"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/selectDateBtn"
+                android:layout_margin="7dp"
+                android:text="Select Date"
+                android:textSize="16sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="7dp"
+                android:text="Select image"
+                android:textSize="16sp"/>
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_margin="7dp"
+                android:src="@drawable/demo_product"
+                android:id="@+id/productIV"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="7dp"
+                    android:id="@+id/captureBtn"
+                    android:layout_gravity="center"
+                    android:text="Capture"
+                    android:textSize="16sp"/>
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="7dp"
+                    android:id="@+id/galleryBtn"
+                    android:text="Gallery"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/saveBtn"
+                android:layout_margin="7dp"
+                android:layout_gravity="center"
+                android:text="Save"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+    </ScrollView>
+</layout>

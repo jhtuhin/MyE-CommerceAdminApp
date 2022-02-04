@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/addProductsFragment"
+        android:name="com.example.mye_commerceadminapp.ui.AddProductsFragment"
+        android:label="fragment_add_products"
+        tools:layout="@layout/fragment_add_products" />
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.mye_commerceadminapp.ui.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/dashboard_to_login_action"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/dashboard_to_addProduct"
+            app:destination="@id/addProductsFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_self"
+            app:destination="@id/dashboardFragment" />
+        <action
+            android:id="@+id/dashboard_to_productList_action"
+            app:destination="@id/productListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.mye_commerceadminapp.ui.AdminLoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/login_to_dashboard_action"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderListFragment"
+        android:name="com.example.mye_commerceadminapp.ui.OrderListFragment"
+        android:label="fragment_order_list"
+        tools:layout="@layout/fragment_order_list" />
+    <fragment
+        android:id="@+id/productListFragment"
+        android:name="com.example.mye_commerceadminapp.ui.ProductListFragment"
+        android:label="fragment_product_list"
+        tools:layout="@layout/fragment_product_list" >
+        <action
+            android:id="@+id/productList_to_productDetails_action"
+            app:destination="@id/productDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reportFragment"
+        android:name="com.example.mye_commerceadminapp.ui.ReportFragment"
+        android:label="fragment_report"
+        tools:layout="@layout/fragment_report" />
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="com.example.mye_commerceadminapp.ui.ProductDetailsFragment"
+        android:label="fragment_product_details"
+        tools:layout="@layout/fragment_product_details" />
+</navigation>
